@@ -1,0 +1,14 @@
+<div id="demo">
+  <h1>The XMLHttpRequest Object</h1>
+  <button type="button" onclick="myFunc()">Change Content</button>
+</div>
+<script>
+  function myFunc() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.open('GET', 'http://localhost:8000/', true);
+    xhttp.send();
+    xhttp.onreadtstatechange = function () {
+      console.log('hello');
+    };
+  }
+</script>
